@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/logoF1.png" type="image/x-icon" />
+    <title>Questions</title>
+  </head>
+  <body>
+    <div class="box" id="questionContainer">
+      <div class="title">Formula 1 Quiz</div>
+
+      <div class="header">
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="timer">Time: <span id="timer-el"></span></div>
+      </div>
+
+      <div class="questionbox" id="question-el"></div>
+
+      <div class="optionbox">
+        <span id="op1"></span>
+        <span id="op2"></span>
+        <span id="op3"></span>
+        <span id="op4"></span>
+      </div>
+
+      <div class="footer">
+        <button id="next-btn">next</button>
+        <button id="show-btn">show result</button>
+      </div>
+    </div>
+
+    <div class="box" id="resultScreen" style="display: none">
+      <div class="title">Quiz Result</div>
+
+      <div class="resultBox">
+        <label>Questions: </label>
+        <span id="resultQuestion">10</span>
+        <label>Attaempted: </label>
+        <span id="resultAttempt">0</span>
+        <label>Correct: </label>
+        <span id="resultCorrect">0</span>
+        <label>Wrong: </label>
+        <span id="resultWrong">0</span>
+      </div>
+
+      <div class="bottomBox">
+        <a href="./quiz.html">Start Again</a>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="./JS/script.js"></script>
+</html>

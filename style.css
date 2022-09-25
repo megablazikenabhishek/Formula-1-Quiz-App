@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&display=swap');
+
+:root{
+    --font : 'Inter Tight',sans-serif;
+    --margin: 1rem;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+
+    --font-size1: 1.5rem;
+    --font-size2: 1.2rem;
+
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 77%, 27%);
+    --clr-primary-3: hsl(205, 72%, 37%);
+    --clr-primary-4: hsl(205, 63%, 48%);
+    --clr-primary-5: #49a6e9;
+    --clr-primary-6: hsl(205, 89%, 70%);
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-9: hsl(205, 90%, 88%);
+    --clr-primary-10: hsl(205, 100%, 96%);
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+
+    --transition: all 0.3s linear;
+
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font);
+    background: url(./img/bg.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 80vw;
+    height: 70vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+    background-color: white;
+    border-radius: var(--radius);
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.leftside, .rightside{
+    width: 45%;
+    height: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rightside{
+    width: 100%;
+}
+
+#logo{
+    width: 100%;
+    height: 90%;
+}
+
+/* .rightside img{
+    width: 100%;
+    height: 90%;
+} */
+
+.rightside h1{
+    font-size: var(--font-size1);
+    margin-bottom: var(--margin);
+    text-align: center;
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+}
+
+.rightside h2{
+    font-size: var(--font-size2);
+    margin-bottom: var(--margin);
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+}
+
+ul li{
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+#start{
+    width: 40%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: var(--clr-primary-6);
+    border-radius: var(--radius);
+    border: none;
+
+    margin-top: var(--margin);
+    transition: var(--transition);
+}
+
+#start a{
+    text-decoration: none;
+    font-size: var(--font-size2);
+    color: var(--clr-primary-10);
+}
+
+#start:hover{
+    background-color: var(--clr-primary-4);
+    cursor: pointer;
+}
+
+
+/* reposive css */
+
+/* responsive css */
+@media screen and (max-width: 480px){
+    .container{
+        flex-direction: column;
+        height: 80vh;
+        width: 90vw;
+    }
+
+    .leftside, .rightside{
+        width: 100%;
+        height: 50%;
+    }
+
+    #start{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 95vw;
+    }
+
+    .leftside{
+        width: 100%;
+        height: 90%;
+    }
+    .rightside{
+        width: 90%;
+        height: 90%;
+    }
+    #start {
+        width: 80%;
+    }
+}
+    
+@media screen and (max-width: 400px) {
+    .container {
+        flex-direction: column;
+        height: 95vh;
+        width: 90vw;
+    }
+
+    .leftside,
+    .rightside {
+        width: 100%;
+        height: 50%;
+    }
+
+    #start {
+        width: 80%;
+    }
+}
+/* responsive ends */
+
+/* Question page css */
+.box{
+    width: 60vw;
+    min-height: 70vh;
+
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    background-color: white;
+    border-radius: var(--radius);
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 2rem;
+}
+
+.title{
+    border-bottom: 1px solid black;
+    color: #464646;
+    font-size: var(--font-size1);
+    padding-bottom: 0.5rem;
+    margin-bottom: var(--margin);
+    font-weight: 700;
+    width: 70%;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: var(--margin);
+}
+
+.score, .timer{
+    border: 2px solid var(--clr-grey-5);
+    padding : 10px 15px;
+    border-radius: var(--radius);
+}
+
+.questionbox{
+    min-width: 60%;
+    padding: 15px 20px;
+    min-height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size2);
+
+    /* border: 2px solid black; */
+    border-radius: var(--radius);
+
+    background-color: var(--clr-primary-7);
+}
+
+.optionbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: var(--margin);
+    margin: 30px 0;
+    grid-gap: 15px;
+    justify-items: center;
+
+    /* border: 2px solid green; */
+    width: 100%;
+}
+
+.optionbox span{
+    width: 15rem;
+    height: 4rem;
+    border-radius: var(--radius);
+    /* border: 1px solid red; */
+    padding: 10px 15px;
+
+    transition: var(--transition);
+}
+
+.optionbox span:hover{
+    box-shadow: var(--dark-shadow);
+    background-color: var(--clr-grey-10);
+    cursor: pointer;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer button{
+    min-width: 5rem;
+    height: 2.5rem;
+    border-radius: var(--radius);
+    border: none;
+    background-color: var(--clr-primary-4);
+    color: var(--clr-primary-10);
+    font-size: var(--font-size2);
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.footer button:hover{
+    background-color: var(--clr-primary-10);
+    color: var(--clr-primary-4);
+}
+
+/* reposive css */
+@media screen and (max-width: 540px) {
+    .box {
+        height: 95vh;
+        width: 90vw;
+    }
+    .optionbox{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .box {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .box {
+        flex-direction: column;
+        width: 95vw;
+    }
+}
+/* responsive ends */
+
+.resultBox{
+    margin-top: var(--margin);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 15px;
+    font-size: var(--font-size2);
+
+    margin-bottom: var(--margin);
+}
+
+.resultBox span{
+    font-weight: 400;
+}
+
+.bottomBox{
+    margin-top: var(--margin);
+    width: 70%;
+    padding-bottom: 0.5rem;
+    margin-bottom: var(--margin);
+    border-top: 1px solid black;
+    padding-top: var(--margin);
+}
+
+.bottomBox a{
+    min-width: 5rem;
+        height: 2.5rem;
+        border-radius: var(--radius);
+        border: none;
+        background-color: var(--clr-primary-4);
+        color: var(--clr-primary-10);
+        font-size: var(--font-size2);
+        transition: var(--transition);
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        text-decoration: none;
+}
+
+.bottomBox a:hover{
+    background-color: var(--clr-primary-10);
+    color: var(--clr-primary-4);
+}
+
+
+/* sucess class */
+.sucess{
+    background-color: var(--clr-green-light);
+    pointer-events: none;
+}
+
+.wrong{
+    background-color: red;
+    pointer-events: none;
+}
